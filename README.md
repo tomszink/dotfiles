@@ -21,3 +21,8 @@ Dotfiles and Settings
 - Set the new color theme as default in the Terminal preferences.
 - In the Terminal preferences: change in "Advanced" the "Declare terminal as"
   to `xterm-256` (I had problems otherwise with e.g. `tig`)
+
+### ZSH, oh-my-zsh
+
+- Install fonts: https://github.com/powerline/fonts
+- Set better dir colors for Mac OSX: export LSCOLORS=exfxcxdxbxexexabagacad
