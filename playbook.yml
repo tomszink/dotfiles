@@ -1,0 +1,4 @@
+- name: Installing or updating dotfiles
+  hosts: local
+  roles:
+    - testrole

@@ -1,0 +1,3 @@
+- name: Just a test role
+  debug:
+    msg: "This role is for testing"

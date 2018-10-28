@@ -26,3 +26,7 @@ Dotfiles and Settings
 
 - Install fonts: https://github.com/powerline/fonts
 - Set better dir colors for Mac OSX: export LSCOLORS=exfxcxdxbxexexabagacad
+
+### FIXME
+
+- changed a default oh-my-zsh theme => toms => export dotfiles
