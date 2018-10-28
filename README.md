@@ -2,6 +2,13 @@
 Dotfiles and Settings
 
 
+#### Usage
+
+- Execute `run_ansible.sh`
+- Precondions: Ansible must be installed, which is used to create
+  symlinks to the dotfiles in the home directory.
+
+
 #### Pycharm
 
 - Solarized colors: see https://github.com/jkaving/intellij-colors-solarized
@@ -22,11 +29,21 @@ Dotfiles and Settings
 - In the Terminal preferences: change in "Advanced" the "Declare terminal as"
   to `xterm-256` (I had problems otherwise with e.g. `tig`)
 
-### ZSH, oh-my-zsh
+#### ZSH, oh-my-zsh
 
-- Install fonts: https://github.com/powerline/fonts
-- Set better dir colors for Mac OSX: export LSCOLORS=exfxcxdxbxexexabagacad
+- Install fonts: https://github.com/powerline/fonts ???
+- Set better dir colours for Mac OSX: export LSCOLORS=exfxcxdxbxexexabagacad
 
-### FIXME
+#### Development
 
-- changed a default oh-my-zsh theme => toms => export dotfiles
+- Principal approaches
+
+  - Either: create a simlink to the dotfile (e.g. a .zshrc to the one
+    from the dotfiles repo)
+  - Or: use Ansible templates. This is useful if something needs to be
+    preprocessed.
+
+- ToDos
+
+  - Use global vars where useful
+  - Use templating for .zshrc to change the file location

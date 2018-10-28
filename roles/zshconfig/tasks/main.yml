@@ -1,0 +1,22 @@
+- name: zsh - check if config file exists
+  stat:
+    path: "{{ ansible_user_dir }}/.zshrc"
+  register: zshrc_stat
+
+- name: zsh - backup config file in case there is still a real file there
+  command: >
+    mv "{{ ansible_user_dir }}/.zshrc" "{{ ansible_user_dir }}/.zshrc.bak"
+  when: zshrc_stat.stat.exists and not zshrc_stat.stat.islnk
+
+- name: zsh - create a symlink to the dotfiles config file
+  template:
+    src: .zshrc
+    dest: "{{ ansible_user_dir }}/.zshrc"
+
+## alternative approach, for the records
+# - name: zsh - create a symlink to the dotfiles config file
+#   file:
+#     src: "{{ role_path }}/files/.zshrc"
+#     dest: "{{ ansible_user_dir }}/.zshrc"
+#     state: link
+#     force: yes
