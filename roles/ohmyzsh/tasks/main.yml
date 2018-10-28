@@ -1,0 +1,19 @@
+- set_fact:
+    dest_path: "{{ ansible_user_dir }}/.oh-my-zsh/themes"
+    theme_filename: "purity.zsh-theme"
+
+- name: ohmyzsh theme - check if file exists
+  stat:
+    path: "{{ dest_path }}/{{ theme_filename }}"
+  register: ohmyzsh_theme_stat
+
+- name: ohmyzsh theme - backup file in case there is a file there
+  command: |
+    mv "{{ dest_path }}/{{ theme_filename }}" \
+       "{{ dest_path }}/{{ theme_filename }}.bak"
+  when: ohmyzsh_theme_stat.stat.exists
+
+- name: ohmyzsh theme - copy the theme into the target folder
+  copy:
+    src: "{{ theme_filename }}"
+    dest: "{{ dest_path }}/{{ theme_filename }}"
