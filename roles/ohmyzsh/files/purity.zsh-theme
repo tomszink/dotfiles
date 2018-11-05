@@ -1,4 +1,4 @@
-# based on Robby Russels' theme
+# This is based on Robby Russels' theme
 local ret_status="%(?:%{$fg_bold[green]%}➜:%{$fg_bold[red]%}➜)"
 PROMPT='${ret_status} %{$fg[grey]%}%c%{$reset_color%} $(git_prompt_info)'
 
