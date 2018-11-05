@@ -1,38 +1,36 @@
 # dotfiles
-Dotfiles and Settings
+
+Dotfiles, tools and settings for my development environment.
 
 
 #### Usage
 
 - Execute `run_ansible.sh`
 - Precondions: Ansible must be installed, which is used to create
-  symlinks to the dotfiles in the home directory.
-
+  config files from templates and symlinks to the dotfiles from the home
+  directory.
 
 #### Pycharm
 
-- Solarized colors: see https://github.com/jkaving/intellij-colors-solarized
-
+- Solarized colours: see https://github.com/jkaving/intellij-colors-solarized
 
 #### Atom.io
 
 - Syntax Theme: Solarized light
 - UI Theme: One light (will be based on above then)
 
-
 #### Max OSX Terminal
 
-- Solarized colors: http://ethanschoonover.com/solarized/files/solarized.zip
-- Download the colors, find the folder with the terminal colors, and install
+- Solarized colours: http://ethanschoonover.com/solarized/files/solarized.zip
+- Download the colours, find the folder with the terminal colours, and install
   them from Finder with "Open".
-- Set the new color theme as default in the Terminal preferences.
+- Set the new colour theme as default in the Terminal preferences.
 - In the Terminal preferences: change in "Advanced" the "Declare terminal as"
   to `xterm-256` (I had problems otherwise with e.g. `tig`)
 
 #### ZSH, oh-my-zsh
 
-- Install fonts: https://github.com/powerline/fonts ???
-- Set better dir colours for Mac OSX: export LSCOLORS=exfxcxdxbxexexabagacad
+- Set better dir colours for Mac OSX: `export LSCOLORS=exfxcxdxbxexexabagacad`
 
 #### Development
 
@@ -45,5 +43,11 @@ Dotfiles and Settings
 
 - ToDos
 
-  - Use global vars where useful
-  - Use templating for .zshrc to change the file location
+  - Use global vars where useful; have an example file a personal files,
+    which gets "gitignored"
+  - git config file, local
+  - bash
+  - tig
+  - atom?
+  - install additional tools with homebrew: zsh, oh-my-zsh, tig,
+    silver-searcher, icdiff
