@@ -1,0 +1,65 @@
+# This is Git's per-user configuration file.
+[core]
+	editor = /usr/bin/vim
+	excludesfile = /Users/toms/.gitignore_global
+
+[user]
+	user = Toms Zink
+	email = toms.zink@gmail.com
+
+[alias]
+	s = status -sb
+	co = checkout
+  cob = checkout -b
+	d = difftool
+	dv = difftool -t opendiff
+
+[diff]
+  tool = icdiff
+
+[difftool]
+	prompt = false
+
+[difftool "opendiff"]
+	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
+	path =
+
+[difftool "icdiff"]
+	# https://github.com/jeffkaufman/icdiff
+	cmd = icdiff -N -U 2 $LOCAL $REMOTE
+
+[difftool "pycharm"]
+  cmd = /usr/local/bin/charm diff "$LOCAL" "$REMOTE" && echo "Press enter to continue..." && read
+
+[merge]
+	tool = pycharm
+	keepBackup = false
+
+[mergetool "pycharm"]
+	cmd = /usr/local/bin/charm merge "$LOCAL" "$REMOTE" "$BASE" "$MERGED"
+
+[mergetool "sourcetree"]
+	cmd = /Applications/SourceTree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
+	trustExitCode = true
+
+# git colors (to be improved further)
+[color]
+  branch = auto
+  diff = auto
+  status = auto
+
+[color "branch"]
+  current = red bold
+  local = black
+  remote = green
+
+[color "diff"]
+  meta = blue bold
+  frag = blue
+  old = red bold
+  new = green bold
+
+[color "status"]
+  added = yellow
+  changed = green
+  untracked = cyan
