@@ -3,3 +3,6 @@
 
 # Vim temporary
 *~
+
+# IDEs
+.idea/

@@ -1,18 +1,18 @@
-# This is Git's per-user configuration file.
+# For personal & local settings, use a local file and include it
+
+[include]
+  path = ~/.gitconfig.local
+
 [core]
 	editor = /usr/bin/vim
-	excludesfile = /Users/toms/.gitignore_global
-
-[user]
-	user = Toms Zink
-	email = toms.zink@gmail.com
+	excludesfile = ~/.gitignore_global
 
 [alias]
-	s = status -sb
 	co = checkout
   cob = checkout -b
 	d = difftool
 	dv = difftool -t opendiff
+	s = status -sb
 
 [diff]
   tool = icdiff
@@ -42,7 +42,7 @@
 	cmd = /Applications/SourceTree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
 	trustExitCode = true
 
-# git colors (to be improved further)
+# git colors
 [color]
   branch = auto
   diff = auto

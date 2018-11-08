@@ -1,5 +1,0 @@
-- name: Installing or updating dotfiles
-  hosts: local
-  roles:
-    - ohmyzsh
-    - zshconfig
