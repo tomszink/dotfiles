@@ -5,10 +5,8 @@ Dotfiles, tools and settings for my development environment.
 
 #### Usage
 
-- Execute `run_ansible.sh`
-- Precondions: Ansible must be installed, which is used to create
-  config files from templates and symlinks to the dotfiles from the home
-  directory.
+- Create symlinks from the source files in this repo to the target files
+  in the homedirectory. Use full paths.
 
 #### Pycharm
 
@@ -17,7 +15,7 @@ Dotfiles, tools and settings for my development environment.
 #### Atom.io
 
 - Syntax Theme: Solarized light
-- UI Theme: One light (will be based on above then)
+- UI Theme: "One light" (will be based on above then)
 
 #### Max OSX Terminal
 
@@ -36,18 +34,13 @@ Dotfiles, tools and settings for my development environment.
 
 - Principal approaches
 
-  - Either: create a simlink to the dotfile (e.g. a .zshrc to the one
+  - Either: create a symlink to the dotfile (e.g. a .zshrc to the one
     from the dotfiles repo)
   - Or: use Ansible templates. This is useful if something needs to be
     preprocessed.
 
 - ToDos
 
-  - Use global vars where useful; have an example file a personal files,
-    which gets "gitignored"
-  - git config file, local
-  - bash
-  - tig
-  - atom?
+  - atom
   - install additional tools with homebrew: zsh, oh-my-zsh, tig,
     silver-searcher, icdiff
