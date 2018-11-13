@@ -1,65 +1,83 @@
-# For personal & local settings, use a local file and include it
-
+# for personal & local settings, use a local file and include it
 [include]
   path = ~/.gitconfig.local
 
 [core]
 	editor = /usr/bin/vim
+  # alternative: editor = atom --wait
 	excludesfile = ~/.gitignore_global
 
+[credential]
+	helper = osxkeychain  # OSX only
+
 [alias]
+  b = branch
 	co = checkout
   cob = checkout -b
 	d = difftool
-	dv = difftool -t opendiff
+	dv = difftool -t pycharm
+  l = log --oneline --decorate --graph --abbrev-commit --date=relative -n 10
+	lg = log --graph --pretty=format:'%Cred%h%Creset %C(magenta bold)%G?%Creset % -%C(yellow)%d%Creset %s %Cgreen(%cd) %C(bold blue)<%an>%Creset' --date=short -n 10
 	s = status -sb
+  pr = pull-request  # for use with "hub" aliased to git
 
+# difftool settings
 [diff]
-  tool = icdiff
+  tool = icdiff  # default for "difftool"
+  submodule = log
 
 [difftool]
 	prompt = false
-
-[difftool "opendiff"]
-	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
-	path =
 
 [difftool "icdiff"]
 	# https://github.com/jeffkaufman/icdiff
 	cmd = icdiff -N -U 2 $LOCAL $REMOTE
 
 [difftool "pycharm"]
-  cmd = /usr/local/bin/charm diff "$LOCAL" "$REMOTE" && echo "Press enter to continue..." && read
+  cmd = charm diff "$LOCAL" "$REMOTE" && \
+        echo "Press enter to continue to next file ..." && read
 
+[difftool "opendiff"]
+	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
+	path =
+
+# mergetool settings
 [merge]
-	tool = pycharm
+	tool = pycharm  # default for "mergetool"
 	keepBackup = false
 
 [mergetool "pycharm"]
-	cmd = /usr/local/bin/charm merge "$LOCAL" "$REMOTE" "$BASE" "$MERGED"
-
-[mergetool "sourcetree"]
-	cmd = /Applications/SourceTree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
-	trustExitCode = true
+	cmd = charm merge "$LOCAL" "$REMOTE" "$BASE" "$MERGED"
 
 # git colors
 [color]
   branch = auto
   diff = auto
   status = auto
+  ui = auto
 
 [color "branch"]
-  current = red bold
-  local = black
+  current = cyan reverse
+  local = cyan
   remote = green
 
 [color "diff"]
-  meta = blue bold
+  meta = blue
   frag = blue
-  old = red bold
-  new = green bold
+  old = red
+  new = green
 
 [color "status"]
-  added = yellow
-  changed = green
-  untracked = cyan
+  branch = cyan reverse
+	localBranch = cyan reverse
+	added = green bold
+  changed = yellow bold
+  untracked = cyan bold
+
+# submodules
+[status]
+	submodulesummary = 1
+
+# remove references removed from origin (e.g. deleted branches)
+[remote "origin"]
+	prune = true
