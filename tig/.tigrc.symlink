@@ -1,7 +1,15 @@
-# TZ config file for tig. see: http://jonas.nitro.dk/tig/tigrc.5.html
+# config file for tig, see: http://jonas.nitro.dk/tig/tigrc.5.html
 
-# View settings
+# general settings
 set vertical-split = true
-#set main-view-date = short
+
+# main view
 set main-view-author = abbreviated
 set main-view-id = true
+set main-view-date = relative-compact
+# set main-view-date = custom
+# set main-view-date-format = "%Y-%m-%d %H:%M"
+set git-colors = no
+
+# color adjustments
+color id yellow default
