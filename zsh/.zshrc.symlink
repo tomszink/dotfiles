@@ -121,3 +121,6 @@ alias grep='grep --color=auto'
 
 # ensure english as shell default language
 export LANG=en_US.UTF-8
+
+# use pager (less) only if output is not fitting already one screen
+export LESS="-F -X $LESS"
