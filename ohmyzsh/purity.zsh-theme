@@ -1,1 +1,0 @@
-ohmyzsh/purity.zsh-theme.symlink
