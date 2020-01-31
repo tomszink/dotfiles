@@ -109,6 +109,8 @@ alias ls='ls -Gh'
 alias g='git'
 alias gd='git diff'
 alias gdd='git diff --staged'
+# alias gl='git log --oneline --graph'
+alias gl="git log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cblue(%cr) %C(green)<%an>%Creset' --abbrev-commit"
 alias gs='git status -sb'
 alias ..='cd ../'
 alias ...='cd ../../'
