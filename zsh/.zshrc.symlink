@@ -115,6 +115,7 @@ alias ...='cd ../../'
 
 # directory aliases
 alias repos='cd ~/repos'
+alias src='cd ~/src'
 
 # grep with color
 alias grep='grep --color=auto'
