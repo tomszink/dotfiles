@@ -19,6 +19,7 @@ Dotfiles, tools and settings for my development environment.
 
 #### Max OSX Terminal
 
+- Switch the default to another color scheme, or: ...
 - Solarized colours: http://ethanschoonover.com/solarized/files/solarized.zip
 - Download the colours, find the folder with the terminal colours, and install
   them from Finder with "Open".
@@ -26,9 +27,29 @@ Dotfiles, tools and settings for my development environment.
 - In the Terminal preferences: change in "Advanced" the "Declare terminal as"
   to `xterm-256` (I had problems otherwise with e.g. `tig`)
 
+
 #### ZSH, oh-my-zsh
 
 - Set better dir colours for Mac OSX: `export LSCOLORS=exfxcxdxbxexexabagacad`
+- Install the "powerlevel10k" theme, see:
+
+  1. Install fonts
+
+     https://github.com/romkatv/powerlevel10k#meslo-nerd-font-patched-for-powerlevel10k
+
+     => download, install, then activate in the Max OS X Terminal
+
+  2. Install theme to the ~/.oh-my-zsh folder:
+
+     https://github.com/romkatv/powerlevel10k#meslo-nerd-font-patched-for-powerlevel10k
+
+  3. Symlink the config file from this repo (or to create a new
+     config run: `p10k configure`)
+
+- Auto-suggestions like fish:
+
+  - https://github.com/zsh-users/zsh-autosuggestions/blob/master/INSTALL.md
+  - => clone the repo into ~/.oh-my-zsh/custom/plugins
 
 #### Development
 
@@ -39,8 +60,20 @@ Dotfiles, tools and settings for my development environment.
   - Or: use Ansible templates. This is useful if something needs to be
     preprocessed.
 
-- ToDos
+- ToDos / Additional tools
 
-  - atom
-  - install additional tools with homebrew: zsh, oh-my-zsh, tig,
-    silver-searcher, icdiff
+  - Atom config
+  - Homebrew installations:
+
+    - zsh
+    - oh-my-zsh
+    - tig
+    - silver-searcher (ag)
+    - icdiff (gitdiff)
+    - rectangle (brew cask install)
+    - tree
+
+  - Python
+
+    - pyenv (see e.g.: https://realpython.com/intro-to-pyenv/)
+    - pipx
