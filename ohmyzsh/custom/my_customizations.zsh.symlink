@@ -1,0 +1,4 @@
+# File for customization by overriding variables
+
+# TZ: customization or color for autosuggestion
+typeset -g ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=151'
