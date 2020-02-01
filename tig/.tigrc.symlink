@@ -15,3 +15,8 @@ color id yellow default
 ##  alternative settings for reference
 # set main-view-date = custom
 # set main-view-date-format = "%Y-%m-%d %H:%M"
+
+## shortcut to copy commit sha to clipboard
+# see related: https://github.com/jonas/tig/wiki/Bindings
+# copy with "9" the short commit sha
+bind generic 9 !@sh -c "git rev-parse --short %(commit) | pbcopy"
