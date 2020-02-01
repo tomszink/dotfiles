@@ -41,7 +41,7 @@ Dotfiles, tools and settings for my development environment.
 
   2. Install theme to the ~/.oh-my-zsh folder:
 
-     https://github.com/romkatv/powerlevel10k#meslo-nerd-font-patched-for-powerlevel10k
+     https://github.com/romkatv/powerlevel10k#oh-my-zsh
 
   3. Symlink the config file from this repo (or to create a new
      config run: `p10k configure`)
