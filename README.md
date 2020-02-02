@@ -53,6 +53,21 @@ Dotfiles, tools and settings for my development environment.
   - Hint: autocomplete with "->" (arrow-right) or single words with "ALT->"
     (ALT and arrow-right)
 
+#### Python
+
+- pyenv (https://github.com/pyenv/pyenv)
+
+      - See e.g.: https://realpython.com/intro-to-pyenv/
+      - List locally available python versions with `pyenv install 3.8.1`
+      - Install python version e.g. with `pyenv install 3.8.1`
+      - Set system wide global version with `pyenv global 3.8.1`
+      - Set directory specific version with ``pyenv local 3.8.1``
+      - Set shell version: `pyenv shell 3.8.1`
+
+- pipx
+- pipenv
+
+
 #### Development
 
 - Principal approaches
@@ -65,17 +80,3 @@ Dotfiles, tools and settings for my development environment.
 - ToDos / Additional tools
 
   - Atom config
-  - Homebrew installations:
-
-    - zsh
-    - oh-my-zsh
-    - tig
-    - silver-searcher (ag)
-    - icdiff (gitdiff)
-    - rectangle (brew cask install)
-    - tree
-
-  - Python
-
-    - pyenv (see e.g.: https://realpython.com/intro-to-pyenv/)
-    - pipx

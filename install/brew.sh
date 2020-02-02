@@ -16,6 +16,7 @@ brew_packages=(
   hub
   htop
   pipx
+  pyenv
   shellcheck
   tig
   tree
