@@ -50,6 +50,8 @@ Dotfiles, tools and settings for my development environment.
 
   - https://github.com/zsh-users/zsh-autosuggestions/blob/master/INSTALL.md
   - => clone the repo into ~/.oh-my-zsh/custom/plugins
+  - Hint: autocomplete with "->" (arrow-right) or single words with "ALT->"
+    (ALT and arrow-right)
 
 #### Development
 
