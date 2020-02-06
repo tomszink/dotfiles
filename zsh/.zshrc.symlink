@@ -152,3 +152,14 @@ export PATH="$PATH:~/.local/bin"
 
 # Shell support for pyenv
 eval "$(pyenv init -)"
+
+
+###
+### Include local zshrc if present for system specific settings
+###
+
+ZSHRC_LOCAL_PATH="$HOME/.zshrc.local"
+if [ -r "$ZSHRC_LOCAL_PATH" ]
+then
+  source "$ZSHRC_LOCAL_PATH"
+fi
