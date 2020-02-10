@@ -8,8 +8,10 @@ set -x
 pipx_packages=(
   black
   flake8
+  gitlint
   pipenv
   tox
+  yamllint
 )
 
 for pipx_package in "${pipx_packages[@]}"; do
