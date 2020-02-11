@@ -1,0 +1,22 @@
+---
+
+# This file or its symlink must go to:
+# ~/.config/yamllint/config
+
+# http://yamllint.readthedocs.io/en/stable/configuration.html
+
+extends: default
+
+# Ignore paths, to allow linting project directories
+ignore: |
+  .git/
+  .tox/
+
+rules:
+  document-start: disable
+  line-length:
+    allow-non-breakable-inline-mappings: true
+    allow-non-breakable-words: true
+    max: 99
+  truthy:
+    disable
