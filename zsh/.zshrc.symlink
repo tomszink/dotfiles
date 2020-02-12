@@ -121,8 +121,8 @@ alias ls='ls -Gh'
 # aliases git related
 alias g='git'
 alias gc='git commit -v'
-alias gd='git diff'
-alias gdd='git diff --staged'
+alias gd='git --no-pager diff'
+alias gdd='git --no-pager diff --staged'
 alias gl="git log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cblue(%cr) %C(green)<%an>%Creset' --abbrev-commit"
 alias gs='git status -sb'
 
