@@ -9,6 +9,7 @@ pipx_packages=(
   black
   flake8
   gitlint
+  jupyterlab
   pipenv
   tox
   yamllint
