@@ -13,7 +13,7 @@ brew update
 brew_packages=(
   ag
   git
-  hub
+  gh
   htop
   pipx
   pyenv
@@ -34,16 +34,17 @@ done
 
 ## Install brew cask packages
 brew_cask_packages=(
+  keepassxc
   rectangle
 )
 
 for brew_cask_package in "${brew_cask_packages[@]}"; do
-  if brew cask ls --versions $brew_cask_package &> /dev/null
+  if brew ls --casks $brew_cask_package &> /dev/null
   then
     # package installed already with brew casks, but check for update
-    brew cask upgrade "$brew_cask_package"
+    brew upgrade --cask "$brew_cask_package"
   else
-    brew cask install "$brew_cask_package"
+    brew install --cask "$brew_cask_package"
   fi
 done
 
