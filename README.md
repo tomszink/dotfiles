@@ -7,15 +7,22 @@ Dotfiles, tools and settings for my development environment.
 
 - Create symlinks from the source files in this repo to the target files
   in the homedirectory. Use full paths.
+- Example:
+  ln -s /Users/<your-path ...>/dotfiles/git/.gitconfig.symlink ~/.gitconfig
+  ln -s /Users/<your-path ...>/dotfiles/git/.gitignore.global.symlink ~/.gitignore
+- The local git config file is to be copied into the home dir and then adjusted.
+
 
 #### Pycharm
 
 - Solarized colours: see https://github.com/jkaving/intellij-colors-solarized
 
+
 #### Atom.io
 
 - Syntax Theme: Solarized light
 - UI Theme: "One light" (will be based on above then)
+
 
 #### Max OSX Terminal
 
@@ -30,7 +37,10 @@ Dotfiles, tools and settings for my development environment.
 
 #### ZSH, oh-my-zsh
 
-- Set better dir colours for Mac OSX: `export LSCOLORS=exfxcxdxbxexexabagacad`
+- Install zsh:
+
+  - `sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"`
+
 - Install the "powerlevel10k" theme, see:
 
   1. Install fonts
@@ -39,9 +49,10 @@ Dotfiles, tools and settings for my development environment.
 
      => download, install, then activate in the Max OS X Terminal
 
-  2. Install theme to the ~/.oh-my-zsh folder:
+  2. Install the theme to the ~/.oh-my-zsh folder:
 
-     https://github.com/romkatv/powerlevel10k#oh-my-zsh
+    - see: https://github.com/romkatv/powerlevel10k#oh-my-zsh
+    - i.e. `git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k`
 
   3. Symlink the config file from this repo (or to create a new
      config run: `p10k configure`)
@@ -52,6 +63,11 @@ Dotfiles, tools and settings for my development environment.
   - => clone the repo into ~/.oh-my-zsh/custom/plugins
   - Hint: autocomplete with "->" (arrow-right) or single words with "ALT->"
     (ALT and arrow-right)
+
+- Syntax highlighting
+
+  - git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
+
 
 #### Python
 
@@ -79,4 +95,4 @@ Dotfiles, tools and settings for my development environment.
 
 - ToDos / Additional tools
 
-  - Atom config
+  - Add configs for vsc, atom
