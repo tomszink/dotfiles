@@ -3,23 +3,23 @@
   path = ~/.gitconfig.local
 
 [core]
-	editor = /usr/bin/vim
+  editor = /usr/bin/vim
   # alternative: editor = atom --wait
-	excludesfile = ~/.gitignore_global
+  excludesfile = ~/.gitignore_global
 
 [credential]
-	helper = osxkeychain  # OSX only
+  helper = osxkeychain  # OSX only
 
 [alias]
   b = branch
-	co = checkout
+  co = checkout
   cob = checkout -b
   com = checkout master
-	d = difftool
-	dv = difftool -t pycharm
+  d = difftool
+  dv = difftool -t pycharm
   l = log --oneline --decorate --graph --abbrev-commit --date=relative -n 10
-	lg = log --graph --pretty=format:'%Cred%h%Creset %C(magenta bold)%G?%Creset % -%C(yellow)%d%Creset %s %Cgreen(%cd) %C(bold blue)<%an>%Creset' --date=short -n 10
-	s = status -sb
+  lg = log --graph --pretty=format:'%Cred%h%Creset %C(magenta bold)%G?%Creset % -%C(yellow)%d%Creset %s %Cgreen(%cd) %C(bold blue)<%an>%Creset' --date=short -n 10
+  s = status -sb
   pr = pull-request  # for use with "hub" aliased to git
 
 # difftool settings
@@ -28,27 +28,27 @@
   submodule = log
 
 [difftool]
-	prompt = false
+  prompt = false
 
 [difftool "icdiff"]
-	# https://github.com/jeffkaufman/icdiff
-	cmd = icdiff -N -U 2 $LOCAL $REMOTE
+  # https://github.com/jeffkaufman/icdiff
+  cmd = icdiff -N -U 2 $LOCAL $REMOTE
 
 [difftool "pycharm"]
   cmd = charm diff "$LOCAL" "$REMOTE" && \
         echo "Press enter to continue to next file ..." && read
 
 [difftool "opendiff"]
-	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
-	path =
+  cmd = opendiff \"$LOCAL\" \"$REMOTE\"
+  path =
 
 # mergetool settings
 [merge]
-	tool = pycharm  # default for "mergetool"
-	keepBackup = false
+  tool = pycharm  # default for "mergetool"
+  keepBackup = false
 
 [mergetool "pycharm"]
-	cmd = charm merge "$LOCAL" "$REMOTE" "$BASE" "$MERGED"
+  cmd = charm merge "$LOCAL" "$REMOTE" "$BASE" "$MERGED"
 
 # git colors
 [color]
@@ -70,23 +70,23 @@
 
 [color "status"]
   branch = cyan reverse
-	localBranch = cyan reverse
-	added = green bold
+  localBranch = cyan reverse
+  added = green bold
   changed = yellow bold
   untracked = cyan bold
 
 # submodules
 [status]
-	submodulesummary = 1
+  submodulesummary = 1
 
 # remove references removed from origin (e.g. deleted branches)
 [remote "origin"]
-	prune = true
+  prune = true
 [difftool "sourcetree"]
-	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
-	path =
+  cmd = opendiff \"$LOCAL\" \"$REMOTE\"
+  path =
 [mergetool "sourcetree"]
-	cmd = /Applications/Sourcetree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
-	trustExitCode = true
+  cmd = /Applications/Sourcetree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
+  trustExitCode = true
 [init]
-	defaultBranch = master
+  defaultBranch = master
