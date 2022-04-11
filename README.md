@@ -9,7 +9,7 @@ Dotfiles, tools and settings for my development environment.
   in the homedirectory. Use full paths.
 - Example:
   ln -s /Users/<your-path ...>/dotfiles/git/.gitconfig.symlink ~/.gitconfig
-  ln -s /Users/<your-path ...>/dotfiles/git/.gitignore.global.symlink ~/.gitignore
+  ln -s /Users/<your-path ...>/dotfiles/git/.gitignore.global.symlink ~/.gitignore_global
 - The local git config file is to be copied into the home dir and then adjusted.
 
 
