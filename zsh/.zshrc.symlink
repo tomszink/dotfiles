@@ -169,5 +169,3 @@ then
   source "$ZSHRC_LOCAL_PATH"
 fi
 
-# Created by `pipx` on 2021-07-02 21:33:40
-export PATH="$PATH:/Users/toms/.local/bin"
