@@ -25,6 +25,8 @@ brew_packages=(
   tig
   tree
   wget
+  zsh
+  zsh-history-substring-search
 )
 
 for brew_package in "${brew_packages[@]}"; do
