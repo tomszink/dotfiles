@@ -3,7 +3,7 @@
 Dotfiles, tools and settings for my development environment.
 
 
-#### Usage
+### Usage
 
 - Create symlinks from the source files in this repo to the target files
   in the homedirectory. Use full paths.
@@ -13,18 +13,17 @@ Dotfiles, tools and settings for my development environment.
 - The local git config file is to be copied into the home dir and then adjusted.
 
 
-#### Pycharm
+### Pycharm
 
 - Solarized colours: see https://github.com/jkaving/intellij-colors-solarized
 
 
-#### Atom.io
+### Visual Studio Code
 
-- Syntax Theme: Solarized light
-- UI Theme: "One light" (will be based on above then)
+- todo
 
 
-#### Max OSX Terminal
+### Max OSX Terminal
 
 - Switch the default to another color scheme, or: ...
 - Solarized colours: http://ethanschoonover.com/solarized/files/solarized.zip
@@ -35,8 +34,9 @@ Dotfiles, tools and settings for my development environment.
   to `xterm-256` (I had problems otherwise with e.g. `tig`)
 
 
-#### ZSH, oh-my-zsh
+### ZSH, oh-my-zsh
 
+- https://ohmyz.sh
 - Install zsh:
 
   - `sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"`
@@ -69,7 +69,7 @@ Dotfiles, tools and settings for my development environment.
   - git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
 
 
-#### Python
+### Python
 
 - pyenv (https://github.com/pyenv/pyenv)
 
@@ -84,7 +84,7 @@ Dotfiles, tools and settings for my development environment.
 - pipenv
 
 
-#### Development
+### Development
 
 - Principal approaches
 
@@ -95,4 +95,4 @@ Dotfiles, tools and settings for my development environment.
 
 - ToDos / Additional tools
 
-  - Add configs for vsc, atom
+  - Add configs for vsc, vim
