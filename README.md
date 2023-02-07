@@ -13,16 +13,6 @@ Dotfiles, tools and settings for my development environment.
 - The local git config file is to be copied into the home dir and then adjusted.
 
 
-### Pycharm
-
-- Solarized colours: see https://github.com/jkaving/intellij-colors-solarized
-
-
-### Visual Studio Code
-
-- todo
-
-
 ### Max OSX Terminal
 
 - Switch the default to another color scheme, or: ...
@@ -81,8 +71,19 @@ Dotfiles, tools and settings for my development environment.
       - Set shell version: `pyenv shell 3.8.1`
 
 - pipx
+
+  - install python commands: pipx install cowsay
+  - list intallations: pipx list
+  - run (isolated): pipx install cowsay hello
+
 - pipenv
 
+### gitlint
+
+- I'm using an alias in .zshrc to point to a user config (symlinked
+  from this repo), to e.g. ignore an empty git commit body
+- You can install this also as a commit hook, e.g. via
+  `gitlint install-hook`
 
 ### Development
 
@@ -95,4 +96,4 @@ Dotfiles, tools and settings for my development environment.
 
 - ToDos / Additional tools
 
-  - Add configs for vsc, vim
+  - Add configs for vsc

@@ -15,9 +15,10 @@ brew_packages=(
   git
   gh
   htop
+  jq
   k9s
-  kubectl
   keepassxc
+  kubectl
   pipx
   pyenv
   rectangle

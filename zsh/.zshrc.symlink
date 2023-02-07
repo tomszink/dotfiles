@@ -123,6 +123,8 @@ alias ..='cd ../'
 alias ...='cd ../../'
 alias ll='ls -lA'
 alias ls='ls -Gh'
+alias c='code' ## for vsc
+alias glint='gitlint --config ~/.gitlint'
 
 # aliases git related
 alias g='git'
@@ -154,8 +156,8 @@ export LESS="-F -X $LESS"
 ### Python related
 ###
 
-# pipex: ensure .local/bin is in the path
-export PATH="$PATH:~/.local/bin"
+# pipx: ensure .local/bin is in the path
+export PATH="$PATH:$HOME/.local/bin"
 
 # Shell support for pyenv
 # todo: this needs to be fixed for newer versions
