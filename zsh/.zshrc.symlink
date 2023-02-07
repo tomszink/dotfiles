@@ -124,6 +124,7 @@ alias ...='cd ../../'
 alias ll='ls -lA'
 alias ls='ls -Gh'
 alias c='code' ## for vsc
+alias glint='gitlint --config ~/.gitlint'
 
 # aliases git related
 alias g='git'
