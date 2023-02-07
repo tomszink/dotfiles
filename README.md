@@ -7,9 +7,9 @@ Dotfiles, tools and settings for my development environment.
 
 - Create symlinks from the source files in this repo to the target files
   in the homedirectory. Use full paths.
-- Example:
-  ln -s /Users/<your-path ...>/dotfiles/git/.gitconfig.symlink ~/.gitconfig
-  ln -s /Users/<your-path ...>/dotfiles/git/.gitignore.global.symlink ~/.gitignore_global
+- Examples:
+  `ln -s /Users/<your-path ...>/dotfiles/git/.gitconfig.symlink ~/.gitconfig`
+  `ln -s /Users/<your-path ...>/dotfiles/git/.gitignore.global.symlink ~/.gitignore_global`
 - The local git config file is to be copied into the home dir and then adjusted.
 
 
@@ -50,31 +50,31 @@ Dotfiles, tools and settings for my development environment.
 - Auto-suggestions like fish:
 
   - https://github.com/zsh-users/zsh-autosuggestions/blob/master/INSTALL.md
-  - => clone the repo into ~/.oh-my-zsh/custom/plugins
-  - Hint: autocomplete with "->" (arrow-right) or single words with "ALT->"
+  - => clone the repo into `~/.oh-my-zsh/custom/plugins`
+  - Hint: autocomplete with `->` (arrow-right) or single words with `ALT->`
     (ALT and arrow-right)
 
 - Syntax highlighting
 
-  - git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
+  - `git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting`
 
 
 ### Python
 
 - pyenv (https://github.com/pyenv/pyenv)
 
-      - See e.g.: https://realpython.com/intro-to-pyenv/
-      - List locally available python versions with `pyenv versions`
-      - Install python version e.g. with `pyenv install 3.8.1`
-      - Set system wide global version with `pyenv global 3.8.1`
-      - Set directory specific version with ``pyenv local 3.8.1``
-      - Set shell version: `pyenv shell 3.8.1`
+  - See e.g.: https://realpython.com/intro-to-pyenv/
+  - List locally available python versions with `pyenv versions`
+  - Install python version e.g. with `pyenv install 3.8.1`
+  - Set system wide global version with `pyenv global 3.8.1`
+  - Set directory specific version with ``pyenv local 3.8.1``
+  - Set shell version: `pyenv shell 3.8.1`
 
 - pipx
 
-  - install python commands: pipx install cowsay
-  - list intallations: pipx list
-  - run (isolated): pipx install cowsay hello
+  - install python commands: `pipx install cowsay`
+  - list intallations: `pipx list`
+  - run (isolated): `pipx install cowsay hello`
 
 - pipenv
 
@@ -83,7 +83,8 @@ Dotfiles, tools and settings for my development environment.
 - I'm using an alias in .zshrc to point to a user config (symlinked
   from this repo), to e.g. ignore an empty git commit body
 - You can install this also as a commit hook, e.g. via
-  `gitlint install-hook`
+  `gitlint install-hook`. Note though that you still need to amend
+  then the hook's gitlint call with `--config ~/.gitlint`.
 
 ### Development
 
@@ -96,4 +97,4 @@ Dotfiles, tools and settings for my development environment.
 
 - ToDos / Additional tools
 
-  - Add configs for vsc
+  - Add config for vsc
