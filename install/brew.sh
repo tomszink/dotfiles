@@ -25,6 +25,7 @@ brew_packages=(
   shellcheck
   tig
   tree
+  watch
   wget
   zsh
   zsh-history-substring-search
