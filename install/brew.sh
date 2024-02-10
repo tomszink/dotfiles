@@ -20,6 +20,7 @@ brew_packages=(
   keepassxc
   kubectl
   pipx
+  pre-commit
   pyenv
   rectangle
   shellcheck
