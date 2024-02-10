@@ -86,6 +86,11 @@ Dotfiles, tools and settings for my development environment.
   `gitlint install-hook`. Note though that you still need to amend
   then the hook's gitlint call with `--config ~/.gitlint`.
 
+### pre-commit
+
+- See: https://pre-commit.com/#usage
+- Helpful to run gitlint, yamllint and alike always locally
+
 ### Development
 
 - Principal approaches
