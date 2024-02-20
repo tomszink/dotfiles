@@ -68,6 +68,9 @@ ZSH_THEME="robbyrussell"
 # Would you like to use another custom folder than $ZSH/custom?
 # ZSH_CUSTOM=/path/to/new-custom-folder
 
+# From: https://docs.brew.sh/Shell-Completion
+FPATH="$(brew --prefix)/share/zsh/site-functions:${FPATH}"
+
 # Which plugins would you like to load?
 # Standard plugins can be found in ~/.oh-my-zsh/plugins/*
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
@@ -175,3 +178,4 @@ fi
 
 # To activate the history search, add the following at the end of your .zshrc:
 source /opt/homebrew/share/zsh-history-substring-search/zsh-history-substring-search.zsh
+
