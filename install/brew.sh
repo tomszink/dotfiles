@@ -12,6 +12,7 @@ brew update
 ## Install brew packages
 brew_packages=(
   ag
+  atuin
   git
   gh
   htop

@@ -179,3 +179,4 @@ fi
 # To activate the history search, add the following at the end of your .zshrc:
 source /opt/homebrew/share/zsh-history-substring-search/zsh-history-substring-search.zsh
 
+eval "$(atuin init zsh)"
