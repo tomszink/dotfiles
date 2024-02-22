@@ -11,6 +11,7 @@ pipx_packages=(
   gitlint
   jupyterlab
   pipenv
+  ruff
   tox
   yamllint
 )
